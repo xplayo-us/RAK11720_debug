@@ -1,0 +1,653 @@
+{
+  "fqbn": "rak_rui:apollo3:WisCoreRAK11720Board",
+  "name": "WisBlock Core RAK11720 Board",
+  "version": "4.2.2",
+  "properties_id": "WisCoreRAK11720Board",
+  "package": {
+    "maintainer": "RAKwireless",
+    "url": "https://raw.githubusercontent.com/RAKWireless/RAKwireless-Arduino-BSP-Index/main/package_rakwireless.com_rui_index.json",
+    "website_url": "https://RAKwireless.com",
+    "email": "inquiry@RAKwireless.com",
+    "name": "rak_rui",
+    "help": {
+      "online": "https://forum.rakwireless.com"
+    }
+  },
+  "platform": {
+    "architecture": "apollo3",
+    "category": "Contributed",
+    "url": "https://github.com/RAKWireless/RAK-APOLLO3-RUI/archive/refs/tags/v4.2.2_354.tar.gz",
+    "archive_filename": "RAK-APOLLO3-RUI-4.2.2_354.tar.gz",
+    "checksum": "SHA-256:a11ca540fcec24e7e5dd9dd430b283735da252d5f7c4f778210a197017410496",
+    "size": 71832019,
+    "name": "RAKwireless RUI Apollo3 Boards"
+  },
+  "tools_dependencies": [
+    {
+      "packager": "rak_rui",
+      "name": "arm-none-eabi-gcc",
+      "version": "9-2019q4",
+      "systems": [
+        {
+          "checksum": "SHA-256:34180943d95f759c66444a40b032f7dd9159a562670fc334f049567de140c51b",
+          "host": "arm-linux-gnueabihf",
+          "archive_filename": "gcc-arm-none-eabi-7-2019-q4-major-linuxarm.tar.bz2",
+          "url": "http://downloads.arduino.cc/tools/gcc-arm-none-eabi-7-2019-q4-major-linuxarm.tar.bz2",
+          "size": 96613739
+        },
+        {
+          "checksum": "MD5:0dfa059aae18fcf7d842e30c525076a4",
+          "host": "aarch64-linux-gnu",
+          "archive_filename": "gcc-arm-none-eabi-9-2019-q4-major-aarch64-linux.tar.bz2",
+          "url": "https://developer.arm.com/-/media/Files/downloads/gnu-rm/9-2019q4/gcc-arm-none-eabi-9-2019-q4-major-aarch64-linux.tar.bz2",
+          "size": 128670769
+        },
+        {
+          "checksum": "MD5:4a413e0ac8c36daf7c1faa489215e081",
+          "host": "i686-mingw32",
+          "archive_filename": "gcc-arm-none-eabi-9-2019-q4-major-win32.tar.bz2",
+          "url": "https://downloads.rakwireless.com/RUI/RUI3/Tools/gcc-arm-none-eabi-9-2019-q4-major-win32.tar.bz2",
+          "size": 126778751
+        },
+        {
+          "checksum": "MD5:241b64f0578db2cf146034fc5bcee3d4",
+          "host": "x86_64-apple-darwin",
+          "archive_filename": "gcc-arm-none-eabi-9-2019-q4-major-mac.tar.bz2",
+          "url": "https://developer.arm.com/-/media/Files/downloads/gnu-rm/9-2019q4/gcc-arm-none-eabi-9-2019-q4-major-mac.tar.bz2",
+          "size": 116770520
+        },
+        {
+          "checksum": "MD5:fe0029de4f4ec43cf7008944e34ff8cc",
+          "host": "x86_64-pc-linux-gnu",
+          "archive_filename": "gcc-arm-none-eabi-9-2019-q4-major-x86_64-linux.tar.bz2",
+          "url": "https://developer.arm.com/-/media/Files/downloads/gnu-rm/9-2019q4/gcc-arm-none-eabi-9-2019-q4-major-x86_64-linux.tar.bz2",
+          "size": 116802378
+        },
+        {
+          "checksum": "SHA-256:090a0bc2b1956bc49392dff924a6c30fa57c88130097b1972204d67a45ce3cf3",
+          "host": "i686-pc-linux-gnu",
+          "archive_filename": "gcc-arm-none-eabi-7-2018-q2-update-linux32.tar.bz2",
+          "url": "http://downloads.arduino.cc/tools/gcc-arm-none-eabi-7-2018-q2-update-linux32.tar.bz2",
+          "size": 97427309
+        }
+      ]
+    },
+    {
+      "packager": "rak_rui",
+      "name": "buildtime",
+      "version": "v0.0.0",
+      "systems": [
+        {
+          "checksum": "MD5:0cb2c01c12c641c460c7c49b4df61299",
+          "host": "i386-apple-darwin11",
+          "archive_filename": "buildtime-macos.tar.gz",
+          "url": "https://downloads.rakwireless.com/RUI/RUI3/Tools/buildtime-macos.tar.gz",
+          "size": 445
+        },
+        {
+          "checksum": "MD5:c6e85a264273d985269ca95127928f22",
+          "host": "i686-linux-gnu",
+          "archive_filename": "buildtime-linux.tar.gz",
+          "url": "https://downloads.rakwireless.com/RUI/RUI3/Tools/buildtime-linux.tar.gz",
+          "size": 446
+        },
+        {
+          "checksum": "MD5:c6e85a264273d985269ca95127928f22",
+          "host": "x86_64-pc-linux-gnu",
+          "archive_filename": "buildtime-linux.tar.gz",
+          "url": "https://downloads.rakwireless.com/RUI/RUI3/Tools/buildtime-linux.tar.gz",
+          "size": 446
+        },
+        {
+          "checksum": "MD5:e3b6f4f5a0487583feda208985053c2d",
+          "host": "i686-mingw32",
+          "archive_filename": "buildtime-win32.tar.gz",
+          "url": "https://downloads.rakwireless.com/RUI/RUI3/Tools/buildtime-win32.tar.gz",
+          "size": 6558888
+        }
+      ]
+    },
+    {
+      "packager": "rak_rui",
+      "name": "uploader_ymodem",
+      "version": "1.0.1",
+      "systems": [
+        {
+          "checksum": "MD5:d9ef354c91761588ffcabd9583203408",
+          "host": "i386-apple-darwin11",
+          "archive_filename": "uploader_ymodem_macos_v1.0.0.tar.gz",
+          "url": "https://downloads.rakwireless.com/RUI/RUI3/Tools/uploader_ymodem_macos_v1.0.0.tar.gz",
+          "size": 7167
+        },
+        {
+          "checksum": "MD5:e1bf37a89ced75d8c71d65648695fc95",
+          "host": "i686-linux-gnu",
+          "archive_filename": "uploader_ymodem_linux_v1.0.0.tar.gz",
+          "url": "https://downloads.rakwireless.com/RUI/RUI3/Tools/uploader_ymodem_linux_v1.0.0.tar.gz",
+          "size": 7166
+        },
+        {
+          "checksum": "MD5:e1bf37a89ced75d8c71d65648695fc95",
+          "host": "x86_64-pc-linux-gnu",
+          "archive_filename": "uploader_ymodem_linux_v1.0.0.tar.gz",
+          "url": "https://downloads.rakwireless.com/RUI/RUI3/Tools/uploader_ymodem_linux_v1.0.0.tar.gz",
+          "size": 7166
+        },
+        {
+          "checksum": "MD5:127e4cf92ab61814c4cf4f55c7f5b6ff",
+          "host": "i686-mingw32",
+          "archive_filename": "uploader_ymodem_win32_v1.0.1.tar.gz",
+          "url": "https://downloads.rakwireless.com/RUI/RUI3/Tools/uploader_ymodem_win32_v1.0.1.tar.gz",
+          "size": 6602518
+        }
+      ]
+    }
+  ],
+  "config_options": [
+    {
+      "option": "debug",
+      "option_label": "Debug",
+      "values": [
+        {
+          "value": "l0",
+          "value_label": "Level 0 (Release)",
+          "selected": true
+        },
+        {
+          "value": "l1",
+          "value_label": "Level 1 (Error Message)"
+        },
+        {
+          "value": "l2",
+          "value_label": "Level 2 (Full Debug)"
+        },
+        {
+          "value": "l3",
+          "value_label": "Level 3 (Segger SystemView)"
+        }
+      ]
+    },
+    {
+      "option": "supportat",
+      "option_label": "Support AT",
+      "values": [
+        {
+          "value": "1",
+          "value_label": "On",
+          "selected": true
+        },
+        {
+          "value": "2",
+          "value_label": "Off"
+        }
+      ]
+    },
+    {
+      "option": "supportlora",
+      "option_label": "Support LoRaWAN",
+      "values": [
+        {
+          "value": "1",
+          "value_label": "Support LoRaWAN and LoRa P2P",
+          "selected": true
+        },
+        {
+          "value": "2",
+          "value_label": "Support LoRaWAN"
+        },
+        {
+          "value": "3",
+          "value_label": "Support LoRa P2P"
+        },
+        {
+          "value": "4",
+          "value_label": "Not Support"
+        }
+      ]
+    },
+    {
+      "option": "supportAS923",
+      "option_label": "Support LoRaWAN Region AS923",
+      "values": [
+        {
+          "value": "1",
+          "value_label": "On",
+          "selected": true
+        },
+        {
+          "value": "2",
+          "value_label": "Off"
+        }
+      ]
+    },
+    {
+      "option": "supportAU915",
+      "option_label": "Support LoRaWAN Region AU915",
+      "values": [
+        {
+          "value": "1",
+          "value_label": "On",
+          "selected": true
+        },
+        {
+          "value": "2",
+          "value_label": "Off"
+        }
+      ]
+    },
+    {
+      "option": "supportCN470",
+      "option_label": "Support LoRaWAN Region CN470",
+      "values": [
+        {
+          "value": "2",
+          "value_label": "Off",
+          "selected": true
+        },
+        {
+          "value": "1",
+          "value_label": "On"
+        }
+      ]
+    },
+    {
+      "option": "supportCN779",
+      "option_label": "Support LoRaWAN Region CN779",
+      "values": [
+        {
+          "value": "2",
+          "value_label": "Off",
+          "selected": true
+        },
+        {
+          "value": "1",
+          "value_label": "On"
+        }
+      ]
+    },
+    {
+      "option": "supportEU433",
+      "option_label": "Support LoRaWAN Region EU433",
+      "values": [
+        {
+          "value": "2",
+          "value_label": "Off",
+          "selected": true
+        },
+        {
+          "value": "1",
+          "value_label": "On"
+        }
+      ]
+    },
+    {
+      "option": "supportEU868",
+      "option_label": "Support LoRaWAN Region EU868",
+      "values": [
+        {
+          "value": "1",
+          "value_label": "On",
+          "selected": true
+        },
+        {
+          "value": "2",
+          "value_label": "Off"
+        }
+      ]
+    },
+    {
+      "option": "supportKR920",
+      "option_label": "Support LoRaWAN Region KR920",
+      "values": [
+        {
+          "value": "1",
+          "value_label": "On",
+          "selected": true
+        },
+        {
+          "value": "2",
+          "value_label": "Off"
+        }
+      ]
+    },
+    {
+      "option": "supportIN865",
+      "option_label": "Support LoRaWAN Region IN865",
+      "values": [
+        {
+          "value": "1",
+          "value_label": "On",
+          "selected": true
+        },
+        {
+          "value": "2",
+          "value_label": "Off"
+        }
+      ]
+    },
+    {
+      "option": "supportUS915",
+      "option_label": "Support LoRaWAN Region US915",
+      "values": [
+        {
+          "value": "1",
+          "value_label": "On",
+          "selected": true
+        },
+        {
+          "value": "2",
+          "value_label": "Off"
+        }
+      ]
+    },
+    {
+      "option": "supportRU864",
+      "option_label": "Support LoRaWAN Region RU864",
+      "values": [
+        {
+          "value": "1",
+          "value_label": "On",
+          "selected": true
+        },
+        {
+          "value": "2",
+          "value_label": "Off"
+        }
+      ]
+    },
+    {
+      "option": "supportLA915",
+      "option_label": "Support LoRaWAN Region LA915",
+      "values": [
+        {
+          "value": "1",
+          "value_label": "On",
+          "selected": true
+        },
+        {
+          "value": "2",
+          "value_label": "Off"
+        }
+      ]
+    }
+  ],
+  "programmers": [
+    {
+      "platform": "RAKwireless RUI Apollo3 Boards",
+      "id": "ambiq_sbl",
+      "name": "Ambiq SBL"
+    }
+  ],
+  "build_properties": [
+    "_id=WisCoreRAK11720Board",
+    "bootloader.tool.default=bootburn",
+    "bootloader.tool=bootburn",
+    "build.arch=APOLLO3",
+    "build.board.platform.path=/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2",
+    "build.board=WisCore_RAK11720_Board",
+    "build.core.path=/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3",
+    "build.core.platform.path=/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2",
+    "build.core=apollo3",
+    "build.debug_flags=-DCFG_DEBUG=0",
+    "build.extra_flags=-DPART_APOLLO3 -DRAK11720+RAK5005-O_V1.0 -Drak11720 -DWISBLOCK_BASE_5005_O -DUSBCON -DUSB_VID=0x239A -DUSB_PID=0x8029 '-DUSB_MANUFACTURER=\"RAKwireless\"' '-DUSB_PRODUCT=\"WisCore RAK11720 Board\"'",
+    "build.f_cpu=48000000",
+    "build.flags.default=-Os -DLORA_STACK_104 -DLORA_IO_SPI_PORT=1 -DSYS_RTC_COUNTER_PORT=2 -DATCMD_CUST_TABLE_SIZE=64 -DWAN_TYPE=0 -DLORA_STACK_VER=0x040700 -Dgcc -DPART_APOLLO3 -DAM_PACKAGE_BGA -DAM_PART_APOLLO3 -DAM_FREERTOS -DAM_FREERTOS_STIMER_BACKUP -DAM_BLE_USE_NVM -DAM_CUSTOM_BDADDR -DAM_NUS_ADD -DAM_CUS_ADD -DAM_AMOTA_ADD -DAM_UTIL_FAULTISR_PRINT -DSEC_ECC_CFG=SEC_ECC_CFG_HCI -DRTT_LOG_ENABLED -DDEBUG_ENABLED -DSYS_RTC_COUNTER_PORT=2 -DTWI0_ENABLED -DSPI0_ENABLED -DSPI1_ENABLED -DBLE_SUPPORT -DATCMD_CUST_TABLE_SIZE=64 -DSX1262_CHIP -DARDUINO_AM_AP3_SFE_ARTEMIS_DK -DSOFT_SE -DSECURE_ELEMENT_PRE_PROVISIONED -DLORAMAC_CLASSB_ENABLED -DBLE_CENTRAL_SUPPORT -DSUPPORT_BLE -DSUPPORT_SPI -DSUPPORT_AT -DRUI_SDK -DSUPPORT_LORA -DSUPPORT_LORA_P2P -DREGION_AS923 -DREGION_AU915    -DREGION_EU868 -DREGION_KR920 -DREGION_IN865 -DREGION_US915 -DREGION_RU864 -DREGION_LA915 -DCFG_DEBUG=0 -DCFG_LOGGER=1 -DCFG_SYSVIEW=0 \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/variants/WisCore_RAK11720_Board\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/system/WisCore_RAK11720_Board\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/app/RAK11720/src\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/inc\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/mcu/apollo3\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/mcu/apollo3/uhal\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/mcu/apollo3/uhal/serial\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/mcu/none/uhal\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/board/rak11720\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/serial\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/timer\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/delay\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/spimst\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/powersave\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/gpio\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/rtc\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/twimst\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/dfu\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/crypto\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/trng\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/pwm\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/adc\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/system\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/ble\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/flash\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/wdt\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/nfc\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/pdm\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/lora\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/lora/packages\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/lora/LmHandler\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/runtimeConfig\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/nvm\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/battery\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/debug\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/mode\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/mode/cli\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/mode/transparent\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/mode/protocol\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/rui_v3_api\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/rui_v3_api/avr\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/fund/event_queue\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/fund/circular_queue\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/mac\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/mac/region\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/radio\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/system\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/peripherals\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/apps/LoRaMac/common/LmHandler\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/boards\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/bootloader\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/ambiq_ble/apps/amota\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/ambiq_ble/services\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/ambiq_ble/profiles/amota\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/utils\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/CMSIS/AmbiqMicro/Include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/CMSIS/ARM/Include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/devices\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/mcu/apollo3\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/mcu/apollo3/regs\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/FreeRTOSv10.1.1/Source\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/FreeRTOSv10.1.1/Source/include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/FreeRTOSv10.1.1/Source/portable/GCC/AMapollo2\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/FreeRTOSv10.1.1/Source/portable/MemMang\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/gatt\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/hid\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/uribeacon\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/bas\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/hrps\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/rscp\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/gap\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/apps\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/apps/app\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/services\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/include/app\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/hci/ambiq/apollo3\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/hci/ambiq\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/sec/common\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/dm\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/l2c\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/hci\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/att\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/cfg\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/smp\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/wsf/sources\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/wsf/sources/util\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/wsf/sources/port/freertos\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/wsf/include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/uecc\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/mbedtls-2.4.2/include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/RTT/RTT\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/RTT/Config\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/SystemView/Config\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/SystemView/Sample/FreeRTOSv10\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/SystemView/Sample/FreeRTOSv10/Config/Cortex-M\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/SystemView/SEGGER\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/SystemView/SYSVIEW\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/libraries/common\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/libraries/debug\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/libraries/ambiq_log\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/FatFs/source\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/spiffs/src\" -DSUPPORT_AT",
+    "build.flags.feature=-DLORA_STACK_104 -DLORA_IO_SPI_PORT=1 -DSYS_RTC_COUNTER_PORT=2 -DATCMD_CUST_TABLE_SIZE=64 -DWAN_TYPE=0 -DLORA_STACK_VER=0x040700 -Dgcc -DPART_APOLLO3 -DAM_PACKAGE_BGA -DAM_PART_APOLLO3 -DAM_FREERTOS -DAM_FREERTOS_STIMER_BACKUP -DAM_BLE_USE_NVM -DAM_CUSTOM_BDADDR -DAM_NUS_ADD -DAM_CUS_ADD -DAM_AMOTA_ADD -DAM_UTIL_FAULTISR_PRINT -DSEC_ECC_CFG=SEC_ECC_CFG_HCI -DRTT_LOG_ENABLED -DDEBUG_ENABLED -DSYS_RTC_COUNTER_PORT=2 -DTWI0_ENABLED -DSPI0_ENABLED -DSPI1_ENABLED -DBLE_SUPPORT -DATCMD_CUST_TABLE_SIZE=64 -DSX1262_CHIP -DARDUINO_AM_AP3_SFE_ARTEMIS_DK -DSOFT_SE -DSECURE_ELEMENT_PRE_PROVISIONED -DLORAMAC_CLASSB_ENABLED -DBLE_CENTRAL_SUPPORT -DSUPPORT_BLE -DSUPPORT_SPI -DSUPPORT_AT -DRUI_SDK",
+    "build.flags.inc_path=\"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/variants/WisCore_RAK11720_Board\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/system/WisCore_RAK11720_Board\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/app/RAK11720/src\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/inc\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/mcu/apollo3\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/mcu/apollo3/uhal\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/mcu/apollo3/uhal/serial\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/mcu/none/uhal\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/board/rak11720\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/serial\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/timer\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/delay\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/spimst\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/powersave\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/gpio\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/rtc\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/twimst\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/dfu\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/crypto\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/trng\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/pwm\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/adc\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/system\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/ble\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/flash\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/wdt\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/nfc\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/pdm\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/lora\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/lora/packages\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/lora/LmHandler\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/runtimeConfig\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/nvm\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/battery\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/debug\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/mode\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/mode/cli\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/mode/transparent\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/mode/protocol\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/rui_v3_api\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/rui_v3_api/avr\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/fund/event_queue\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/fund/circular_queue\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/mac\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/mac/region\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/radio\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/system\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/peripherals\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/apps/LoRaMac/common/LmHandler\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/boards\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/bootloader\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/ambiq_ble/apps/amota\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/ambiq_ble/services\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/ambiq_ble/profiles/amota\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/utils\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/CMSIS/AmbiqMicro/Include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/CMSIS/ARM/Include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/devices\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/mcu/apollo3\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/mcu/apollo3/regs\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/FreeRTOSv10.1.1/Source\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/FreeRTOSv10.1.1/Source/include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/FreeRTOSv10.1.1/Source/portable/GCC/AMapollo2\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/FreeRTOSv10.1.1/Source/portable/MemMang\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/gatt\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/hid\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/uribeacon\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/bas\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/hrps\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/rscp\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/gap\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/apps\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/apps/app\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/services\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/include/app\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/hci/ambiq/apollo3\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/hci/ambiq\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/sec/common\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/dm\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/l2c\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/hci\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/att\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/cfg\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/smp\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/wsf/sources\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/wsf/sources/util\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/wsf/sources/port/freertos\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/wsf/include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/uecc\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/mbedtls-2.4.2/include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/RTT/RTT\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/RTT/Config\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/SystemView/Config\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/SystemView/Sample/FreeRTOSv10\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/SystemView/Sample/FreeRTOSv10/Config/Cortex-M\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/SystemView/SEGGER\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/SystemView/SYSVIEW\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/libraries/common\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/libraries/debug\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/libraries/ambiq_log\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/FatFs/source\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/spiffs/src\"",
+    "build.flags.lib=",
+    "build.flags.lib_path=\"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/app\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/mcu/apollo3\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/mcu/apollo3/uhal\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/board/rak11720\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/serial\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/flash\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/timer\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/nvm\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/system\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/powersave\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/wdt\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/gpio\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/twimst\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/delay\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/rtc\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/lora\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/runtimeConfig\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/delay\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/gpio\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/rtc\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/twimst\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/dfu\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/pwm\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/crypto\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/trng\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/adc\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/pdm\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/spimst\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/ble\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/battery\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/mode\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/debug\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/rui_v3_api\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/fund/event_queue\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/fund/circular_queue\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/variants/WisCore_RAK11720_Board\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/system/WisCore_RAK11720_Board\"",
+    "build.flags.usb=-DUSBCON -DUSB_VID=0x239A -DUSB_PID=0x8029 '-DUSB_MANUFACTURER=\"RAKwireless\"' '-DUSB_PRODUCT=\"WisCore RAK11720 Board\"'",
+    "build.float_flags=-mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -u _printf_float",
+    "build.fqbn=rak_rui:apollo3:WisCoreRAK11720Board",
+    "build.info.flags=-Drak11720",
+    "build.ldscript=flash_apollo3.ld",
+    "build.library_discovery_phase=0",
+    "build.logger_flags=-DCFG_LOGGER=1",
+    "build.mcu=cortex-m4",
+    "build.pid=0x8029",
+    "build.regionAS923=-DREGION_AS923",
+    "build.regionAU915=-DREGION_AU915",
+    "build.regionCN470=",
+    "build.regionCN779=",
+    "build.regionEU433=",
+    "build.regionEU868=-DREGION_EU868",
+    "build.regionIN865=-DREGION_IN865",
+    "build.regionKR920=-DREGION_KR920",
+    "build.regionLA915=-DREGION_LA915",
+    "build.regionRU864=-DREGION_RU864",
+    "build.regionUS915=-DREGION_US915",
+    "build.series=rak11720",
+    "build.support_at_flag=-DSUPPORT_AT",
+    "build.supportlora=-DSUPPORT_LORA",
+    "build.supportlora_p2p=-DSUPPORT_LORA_P2P",
+    "build.system.path=/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/system",
+    "build.sysview_flags=-DCFG_SYSVIEW=0",
+    "build.usb_manufacturer=\"RAKwireless\"",
+    "build.usb_product=\"WisCore RAK11720 Board\"",
+    "build.variant.path=/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/variants/WisCore_RAK11720_Board",
+    "build.variant=WisCore_RAK11720_Board",
+    "build.variant_h=variant_WisCore_RAK11720_Board.h",
+    "build.vid=0x239A",
+    "compiler.S.cmd=arm-none-eabi-gcc",
+    "compiler.S.extra_flags=",
+    "compiler.S.flags=-c -g -x assembler-with-cpp -w",
+    "compiler.ar.cmd=arm-none-eabi-ar",
+    "compiler.ar.extra_flags=",
+    "compiler.ar.flags=rcs",
+    "compiler.c.cmd=arm-none-eabi-gcc",
+    "compiler.c.elf.cmd=arm-none-eabi-gcc",
+    "compiler.c.elf.extra_flags=",
+    "compiler.c.elf.flags=-Os -Wl,--gc-sections -save-temps",
+    "compiler.c.extra_flags=",
+    "compiler.c.flags=-mcpu=cortex-m4 -mthumb -c -g -w -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -u _printf_float -std=gnu11 -ffunction-sections -fdata-sections --param max-inline-insns-single=500 -nostdlib -fno-use-cxa-atexit -MMD",
+    "compiler.cpp.cmd=arm-none-eabi-g++",
+    "compiler.cpp.extra_flags=-DDEBUG",
+    "compiler.cpp.flags=-mcpu=cortex-m4 -mthumb -c -g -w -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -u _printf_float -std=gnu++11 -ffunction-sections -fdata-sections -fno-threadsafe-statics --param max-inline-insns-single=500 -fno-rtti -fno-exceptions -nostdlib -fno-use-cxa-atexit -MMD",
+    "compiler.elf2bin.cmd=arm-none-eabi-objcopy",
+    "compiler.elf2bin.extra_flags=",
+    "compiler.elf2bin.flags=-O binary -S",
+    "compiler.elf2hex.cmd=arm-none-eabi-objcopy",
+    "compiler.elf2hex.extra_flags=",
+    "compiler.elf2hex.flags=-O ihex",
+    "compiler.ldflags=-mcpu=cortex-m4 -mthumb -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -u _printf_float -Wl,--cref -Wl,--check-sections -Wl,--gc-sections -Wl,--unresolved-symbols=report-all -Wl,--warn-common --specs=nano.specs --specs=nosys.specs -nostartfiles \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/app\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/mcu/apollo3\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/mcu/apollo3/uhal\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/board/rak11720\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/serial\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/flash\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/timer\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/nvm\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/system\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/powersave\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/wdt\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/gpio\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/twimst\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/delay\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/rtc\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/lora\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/runtimeConfig\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/delay\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/gpio\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/rtc\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/twimst\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/dfu\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/pwm\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/crypto\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/trng\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/adc\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/pdm\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/spimst\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/ble\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/battery\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/mode\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/debug\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/rui_v3_api\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/fund/event_queue\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/fund/circular_queue\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/variants/WisCore_RAK11720_Board\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/system/WisCore_RAK11720_Board\"",
+    "compiler.libraries.ldflags=",
+    "compiler.objcopy.cmd=arm-none-eabi-objcopy",
+    "compiler.objcopy.eep.flags=-O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0",
+    "compiler.optimization_flag=-Os",
+    "compiler.path=/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/tools/arm-none-eabi-gcc/9-2019q4/bin/",
+    "compiler.size.cmd=arm-none-eabi-size",
+    "compiler.warning_flags.all=-Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wno-pointer-arith",
+    "compiler.warning_flags.default=",
+    "compiler.warning_flags.more=-Wall",
+    "compiler.warning_flags.none=-w",
+    "compiler.warning_flags=-w",
+    "debug.l1.build.debug_flags=-DCFG_DEBUG=1",
+    "extra.time.dst=3600",
+    "extra.time.local=1756915741",
+    "extra.time.utc=1756930141",
+    "extra.time.zone=-18000",
+    "ide_version=10607",
+    "lora.path=/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora",
+    "menu.debug.l0.build.debug_flags=-DCFG_DEBUG=0",
+    "menu.debug.l0=Level 0 (Release)",
+    "menu.debug.l1=Level 1 (Error Message)",
+    "menu.debug.l2.build.debug_flags=-DCFG_DEBUG=2",
+    "menu.debug.l2=Level 2 (Full Debug)",
+    "menu.debug.l3.build.debug_flags=-DCFG_DEBUG=3",
+    "menu.debug.l3.build.sysview_flags=-DCFG_SYSVIEW=1",
+    "menu.debug.l3=Level 3 (Segger SystemView)",
+    "menu.supportAS923.1.build.regionAS923=-DREGION_AS923",
+    "menu.supportAS923.1=On",
+    "menu.supportAS923.2.build.regionAS923=",
+    "menu.supportAS923.2=Off",
+    "menu.supportAU915.1.build.regionAU915=-DREGION_AU915",
+    "menu.supportAU915.1=On",
+    "menu.supportAU915.2.build.regionAU915=",
+    "menu.supportAU915.2=Off",
+    "menu.supportCN470.1.build.regionCN470=-DREGION_CN470",
+    "menu.supportCN470.1=On",
+    "menu.supportCN470.2.build.regionCN470=",
+    "menu.supportCN470.2=Off",
+    "menu.supportCN779.1.build.regionCN779=-DREGION_CN779",
+    "menu.supportCN779.1=On",
+    "menu.supportCN779.2.build.regionCN779=",
+    "menu.supportCN779.2=Off",
+    "menu.supportEU433.1.build.regionEU433=-DREGION_EU433",
+    "menu.supportEU433.1=On",
+    "menu.supportEU433.2.build.regionEU433=",
+    "menu.supportEU433.2=Off",
+    "menu.supportEU868.1.build.regionEU868=-DREGION_EU868",
+    "menu.supportEU868.1=On",
+    "menu.supportEU868.2.build.regionEU868=",
+    "menu.supportEU868.2=Off",
+    "menu.supportIN865.1.build.regionIN865=-DREGION_IN865",
+    "menu.supportIN865.1=On",
+    "menu.supportIN865.2.build.regionIN865=",
+    "menu.supportIN865.2=Off",
+    "menu.supportKR920.1.build.regionKR920=-DREGION_KR920",
+    "menu.supportKR920.1=On",
+    "menu.supportKR920.2.build.regionKR920=",
+    "menu.supportKR920.2=Off",
+    "menu.supportLA915.1.build.regionLA915=-DREGION_LA915",
+    "menu.supportLA915.1=On",
+    "menu.supportLA915.2.build.regionLA915=",
+    "menu.supportLA915.2=Off",
+    "menu.supportRU864.1.build.regionRU864=-DREGION_RU864",
+    "menu.supportRU864.1=On",
+    "menu.supportRU864.2.build.regionRU864=",
+    "menu.supportRU864.2=Off",
+    "menu.supportUS915.1.build.regionUS915=-DREGION_US915",
+    "menu.supportUS915.1=On",
+    "menu.supportUS915.2.build.regionUS915=",
+    "menu.supportUS915.2=Off",
+    "menu.supportat.1.build.support_at_flag=-DSUPPORT_AT",
+    "menu.supportat.1=On",
+    "menu.supportat.2.build.support_at_flag=-USUPPORT_AT",
+    "menu.supportat.2=Off",
+    "menu.supportlora.1.build.supportlora=-DSUPPORT_LORA",
+    "menu.supportlora.1.build.supportlora_p2p=-DSUPPORT_LORA_P2P",
+    "menu.supportlora.1=Support LoRaWAN and LoRa P2P",
+    "menu.supportlora.2.build.supportlora=-DSUPPORT_LORA",
+    "menu.supportlora.2.build.supportlora_p2p=",
+    "menu.supportlora.2=Support LoRaWAN",
+    "menu.supportlora.3.build.supportlora=",
+    "menu.supportlora.3.build.supportlora_p2p=-DSUPPORT_LORA_P2P -DREGION_EU868",
+    "menu.supportlora.3=Support LoRa P2P",
+    "menu.supportlora.4.build.supportlora=",
+    "menu.supportlora.4.build.supportlora_p2p=",
+    "menu.supportlora.4=Not Support",
+    "name=WisBlock Core RAK11720 Board",
+    "pluggable_discovery.required.0=builtin:serial-discovery",
+    "pluggable_discovery.required.1=builtin:mdns-discovery",
+    "pluggable_monitor.required.serial=builtin:serial-monitor",
+    "recipe.S.o.pattern=\"/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/tools/arm-none-eabi-gcc/9-2019q4/bin/arm-none-eabi-gcc\" -c -g -x assembler-with-cpp -w -DF_CPU=48000000 -DARDUINO=10607 -DARDUINO_WisCore_RAK11720_Board -DARDUINO_ARCH_APOLLO3  -DPART_APOLLO3 -DRAK11720+RAK5005-O_V1.0 -Drak11720 -DWISBLOCK_BASE_5005_O -DUSBCON -DUSB_VID=0x239A -DUSB_PID=0x8029 '-DUSB_MANUFACTURER=\"RAKwireless\"' '-DUSB_PRODUCT=\"WisCore RAK11720 Board\"' -Os -DLORA_STACK_104 -DLORA_IO_SPI_PORT=1 -DSYS_RTC_COUNTER_PORT=2 -DATCMD_CUST_TABLE_SIZE=64 -DWAN_TYPE=0 -DLORA_STACK_VER=0x040700 -Dgcc -DPART_APOLLO3 -DAM_PACKAGE_BGA -DAM_PART_APOLLO3 -DAM_FREERTOS -DAM_FREERTOS_STIMER_BACKUP -DAM_BLE_USE_NVM -DAM_CUSTOM_BDADDR -DAM_NUS_ADD -DAM_CUS_ADD -DAM_AMOTA_ADD -DAM_UTIL_FAULTISR_PRINT -DSEC_ECC_CFG=SEC_ECC_CFG_HCI -DRTT_LOG_ENABLED -DDEBUG_ENABLED -DSYS_RTC_COUNTER_PORT=2 -DTWI0_ENABLED -DSPI0_ENABLED -DSPI1_ENABLED -DBLE_SUPPORT -DATCMD_CUST_TABLE_SIZE=64 -DSX1262_CHIP -DARDUINO_AM_AP3_SFE_ARTEMIS_DK -DSOFT_SE -DSECURE_ELEMENT_PRE_PROVISIONED -DLORAMAC_CLASSB_ENABLED -DBLE_CENTRAL_SUPPORT -DSUPPORT_BLE -DSUPPORT_SPI -DSUPPORT_AT -DRUI_SDK -DSUPPORT_LORA -DSUPPORT_LORA_P2P -DREGION_AS923 -DREGION_AU915    -DREGION_EU868 -DREGION_KR920 -DREGION_IN865 -DREGION_US915 -DREGION_RU864 -DREGION_LA915 -DCFG_DEBUG=0 -DCFG_LOGGER=1 -DCFG_SYSVIEW=0 \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/variants/WisCore_RAK11720_Board\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/system/WisCore_RAK11720_Board\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/app/RAK11720/src\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/inc\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/mcu/apollo3\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/mcu/apollo3/uhal\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/mcu/apollo3/uhal/serial\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/mcu/none/uhal\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/board/rak11720\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/serial\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/timer\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/delay\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/spimst\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/powersave\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/gpio\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/rtc\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/twimst\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/dfu\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/crypto\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/trng\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/pwm\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/adc\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/system\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/ble\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/flash\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/wdt\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/nfc\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/pdm\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/lora\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/lora/packages\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/lora/LmHandler\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/runtimeConfig\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/nvm\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/battery\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/debug\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/mode\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/mode/cli\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/mode/transparent\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/mode/protocol\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/rui_v3_api\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/rui_v3_api/avr\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/fund/event_queue\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/fund/circular_queue\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/mac\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/mac/region\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/radio\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/system\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/peripherals\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/apps/LoRaMac/common/LmHandler\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/boards\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/bootloader\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/ambiq_ble/apps/amota\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/ambiq_ble/services\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/ambiq_ble/profiles/amota\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/utils\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/CMSIS/AmbiqMicro/Include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/CMSIS/ARM/Include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/devices\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/mcu/apollo3\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/mcu/apollo3/regs\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/FreeRTOSv10.1.1/Source\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/FreeRTOSv10.1.1/Source/include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/FreeRTOSv10.1.1/Source/portable/GCC/AMapollo2\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/FreeRTOSv10.1.1/Source/portable/MemMang\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/gatt\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/hid\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/uribeacon\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/bas\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/hrps\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/rscp\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/gap\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/apps\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/apps/app\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/services\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/include/app\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/hci/ambiq/apollo3\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/hci/ambiq\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/sec/common\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/dm\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/l2c\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/hci\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/att\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/cfg\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/smp\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/wsf/sources\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/wsf/sources/util\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/wsf/sources/port/freertos\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/wsf/include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/uecc\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/mbedtls-2.4.2/include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/RTT/RTT\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/RTT/Config\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/SystemView/Config\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/SystemView/Sample/FreeRTOSv10\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/SystemView/Sample/FreeRTOSv10/Config/Cortex-M\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/SystemView/SEGGER\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/SystemView/SYSVIEW\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/libraries/common\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/libraries/debug\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/libraries/ambiq_log\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/FatFs/source\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/spiffs/src\" -DSUPPORT_AT {includes} \"{source_file}\" -o \"{object_file}\"",
+    "recipe.ar.pattern=\"/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/tools/arm-none-eabi-gcc/9-2019q4/bin/arm-none-eabi-ar\" rcs  \"{archive_file_path}\" \"{object_file}\"",
+    "recipe.c.combine.pattern=\"/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/tools/arm-none-eabi-gcc/9-2019q4/bin/arm-none-eabi-gcc\" \"-L{build.path}\" -Os -Wl,--gc-sections -save-temps  \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/soc/apollo3\" \"-Tflash_apollo3.ld\" \"-Wl,-Map,{build.path}/{build.project_name}.map\" -mcpu=cortex-m4 -mthumb -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -u _printf_float -Wl,--cref -Wl,--check-sections -Wl,--gc-sections -Wl,--unresolved-symbols=report-all -Wl,--warn-common --specs=nano.specs --specs=nosys.specs -nostartfiles \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/app\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/mcu/apollo3\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/mcu/apollo3/uhal\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/board/rak11720\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/serial\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/flash\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/timer\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/nvm\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/system\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/powersave\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/wdt\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/gpio\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/twimst\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/delay\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/rtc\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/lora\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/runtimeConfig\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/delay\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/gpio\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/rtc\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/twimst\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/dfu\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/pwm\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/crypto\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/trng\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/adc\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/pdm\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/spimst\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/ble\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/battery\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/mode\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/debug\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/rui_v3_api\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/fund/event_queue\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/fund/circular_queue\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/variants/WisCore_RAK11720_Board\" \"-L/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/system/WisCore_RAK11720_Board\" -o \"{build.path}/{build.project_name}.elf\" {object_files}  -Wl,--start-group -lc -lm -lnosys -lstdc++ \"{build.path}/{archive_file}\"  -Wl,--end-group",
+    "recipe.c.o.pattern=\"/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/tools/arm-none-eabi-gcc/9-2019q4/bin/arm-none-eabi-gcc\" -mcpu=cortex-m4 -mthumb -c -g -w -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -u _printf_float -std=gnu11 -ffunction-sections -fdata-sections --param max-inline-insns-single=500 -nostdlib -fno-use-cxa-atexit -MMD -DF_CPU=48000000 -DARDUINO=10607 -DARDUINO_WisCore_RAK11720_Board -DARDUINO_ARCH_APOLLO3 '-DARDUINO_BSP_VERSION=\"4.2.2\"'  -DPART_APOLLO3 -DRAK11720+RAK5005-O_V1.0 -Drak11720 -DWISBLOCK_BASE_5005_O -DUSBCON -DUSB_VID=0x239A -DUSB_PID=0x8029 '-DUSB_MANUFACTURER=\"RAKwireless\"' '-DUSB_PRODUCT=\"WisCore RAK11720 Board\"' -Os -DLORA_STACK_104 -DLORA_IO_SPI_PORT=1 -DSYS_RTC_COUNTER_PORT=2 -DATCMD_CUST_TABLE_SIZE=64 -DWAN_TYPE=0 -DLORA_STACK_VER=0x040700 -Dgcc -DPART_APOLLO3 -DAM_PACKAGE_BGA -DAM_PART_APOLLO3 -DAM_FREERTOS -DAM_FREERTOS_STIMER_BACKUP -DAM_BLE_USE_NVM -DAM_CUSTOM_BDADDR -DAM_NUS_ADD -DAM_CUS_ADD -DAM_AMOTA_ADD -DAM_UTIL_FAULTISR_PRINT -DSEC_ECC_CFG=SEC_ECC_CFG_HCI -DRTT_LOG_ENABLED -DDEBUG_ENABLED -DSYS_RTC_COUNTER_PORT=2 -DTWI0_ENABLED -DSPI0_ENABLED -DSPI1_ENABLED -DBLE_SUPPORT -DATCMD_CUST_TABLE_SIZE=64 -DSX1262_CHIP -DARDUINO_AM_AP3_SFE_ARTEMIS_DK -DSOFT_SE -DSECURE_ELEMENT_PRE_PROVISIONED -DLORAMAC_CLASSB_ENABLED -DBLE_CENTRAL_SUPPORT -DSUPPORT_BLE -DSUPPORT_SPI -DSUPPORT_AT -DRUI_SDK -DSUPPORT_LORA -DSUPPORT_LORA_P2P -DREGION_AS923 -DREGION_AU915    -DREGION_EU868 -DREGION_KR920 -DREGION_IN865 -DREGION_US915 -DREGION_RU864 -DREGION_LA915 -DCFG_DEBUG=0 -DCFG_LOGGER=1 -DCFG_SYSVIEW=0 \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/variants/WisCore_RAK11720_Board\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/system/WisCore_RAK11720_Board\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/app/RAK11720/src\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/inc\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/mcu/apollo3\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/mcu/apollo3/uhal\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/mcu/apollo3/uhal/serial\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/mcu/none/uhal\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/board/rak11720\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/serial\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/timer\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/delay\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/spimst\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/powersave\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/gpio\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/rtc\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/twimst\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/dfu\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/crypto\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/trng\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/pwm\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/adc\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/system\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/ble\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/flash\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/wdt\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/nfc\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/pdm\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/lora\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/lora/packages\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/lora/LmHandler\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/runtimeConfig\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/nvm\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/battery\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/debug\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/mode\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/mode/cli\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/mode/transparent\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/mode/protocol\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/rui_v3_api\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/rui_v3_api/avr\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/fund/event_queue\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/fund/circular_queue\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/mac\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/mac/region\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/radio\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/system\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/peripherals\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/apps/LoRaMac/common/LmHandler\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/boards\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/bootloader\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/ambiq_ble/apps/amota\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/ambiq_ble/services\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/ambiq_ble/profiles/amota\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/utils\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/CMSIS/AmbiqMicro/Include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/CMSIS/ARM/Include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/devices\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/mcu/apollo3\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/mcu/apollo3/regs\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/FreeRTOSv10.1.1/Source\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/FreeRTOSv10.1.1/Source/include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/FreeRTOSv10.1.1/Source/portable/GCC/AMapollo2\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/FreeRTOSv10.1.1/Source/portable/MemMang\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/gatt\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/hid\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/uribeacon\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/bas\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/hrps\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/rscp\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/gap\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/apps\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/apps/app\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/services\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/include/app\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/hci/ambiq/apollo3\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/hci/ambiq\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/sec/common\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/dm\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/l2c\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/hci\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/att\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/cfg\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/smp\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/wsf/sources\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/wsf/sources/util\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/wsf/sources/port/freertos\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/wsf/include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/uecc\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/mbedtls-2.4.2/include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/RTT/RTT\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/RTT/Config\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/SystemView/Config\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/SystemView/Sample/FreeRTOSv10\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/SystemView/Sample/FreeRTOSv10/Config/Cortex-M\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/SystemView/SEGGER\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/SystemView/SYSVIEW\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/libraries/common\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/libraries/debug\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/libraries/ambiq_log\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/FatFs/source\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/spiffs/src\" -DSUPPORT_AT {includes} \"{source_file}\" -o \"{object_file}\"",
+    "recipe.cpp.o.pattern=\"/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/tools/arm-none-eabi-gcc/9-2019q4/bin/arm-none-eabi-g++\" -mcpu=cortex-m4 -mthumb -c -g -w -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -u _printf_float -std=gnu++11 -ffunction-sections -fdata-sections -fno-threadsafe-statics --param max-inline-insns-single=500 -fno-rtti -fno-exceptions -nostdlib -fno-use-cxa-atexit -MMD -DF_CPU=48000000 -DARDUINO=10607 -DARDUINO_WisCore_RAK11720_Board -DARDUINO_ARCH_APOLLO3 '-DARDUINO_BSP_VERSION=\"4.2.2\"' -DDEBUG -DPART_APOLLO3 -DRAK11720+RAK5005-O_V1.0 -Drak11720 -DWISBLOCK_BASE_5005_O -DUSBCON -DUSB_VID=0x239A -DUSB_PID=0x8029 '-DUSB_MANUFACTURER=\"RAKwireless\"' '-DUSB_PRODUCT=\"WisCore RAK11720 Board\"' -Os -DLORA_STACK_104 -DLORA_IO_SPI_PORT=1 -DSYS_RTC_COUNTER_PORT=2 -DATCMD_CUST_TABLE_SIZE=64 -DWAN_TYPE=0 -DLORA_STACK_VER=0x040700 -Dgcc -DPART_APOLLO3 -DAM_PACKAGE_BGA -DAM_PART_APOLLO3 -DAM_FREERTOS -DAM_FREERTOS_STIMER_BACKUP -DAM_BLE_USE_NVM -DAM_CUSTOM_BDADDR -DAM_NUS_ADD -DAM_CUS_ADD -DAM_AMOTA_ADD -DAM_UTIL_FAULTISR_PRINT -DSEC_ECC_CFG=SEC_ECC_CFG_HCI -DRTT_LOG_ENABLED -DDEBUG_ENABLED -DSYS_RTC_COUNTER_PORT=2 -DTWI0_ENABLED -DSPI0_ENABLED -DSPI1_ENABLED -DBLE_SUPPORT -DATCMD_CUST_TABLE_SIZE=64 -DSX1262_CHIP -DARDUINO_AM_AP3_SFE_ARTEMIS_DK -DSOFT_SE -DSECURE_ELEMENT_PRE_PROVISIONED -DLORAMAC_CLASSB_ENABLED -DBLE_CENTRAL_SUPPORT -DSUPPORT_BLE -DSUPPORT_SPI -DSUPPORT_AT -DRUI_SDK -DSUPPORT_LORA -DSUPPORT_LORA_P2P -DREGION_AS923 -DREGION_AU915    -DREGION_EU868 -DREGION_KR920 -DREGION_IN865 -DREGION_US915 -DREGION_RU864 -DREGION_LA915 -DCFG_DEBUG=0 -DCFG_LOGGER=1 -DCFG_SYSVIEW=0 \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/variants/WisCore_RAK11720_Board\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/system/WisCore_RAK11720_Board\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/app/RAK11720/src\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/inc\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/mcu/apollo3\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/mcu/apollo3/uhal\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/mcu/apollo3/uhal/serial\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/mcu/none/uhal\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/core/board/rak11720\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/serial\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/timer\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/delay\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/spimst\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/powersave\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/gpio\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/rtc\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/twimst\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/dfu\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/crypto\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/trng\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/pwm\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/adc\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/system\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/ble\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/flash\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/wdt\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/nfc\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/udrv/pdm\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/lora\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/lora/packages\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/lora/LmHandler\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/runtimeConfig\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/nvm\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/battery\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/debug\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/mode\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/mode/cli\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/mode/transparent\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/service/mode/protocol\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/rui_v3_api\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/rui_v3_api/avr\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/fund/event_queue\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/component/fund/circular_queue\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/mac\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/mac/region\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/radio\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/system\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/peripherals\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/apps/LoRaMac/common/LmHandler\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/lora/LoRaMac-node-4.7.0/src/boards\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/bootloader\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/ambiq_ble/apps/amota\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/ambiq_ble/services\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/ambiq_ble/profiles/amota\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/utils\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/CMSIS/AmbiqMicro/Include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/CMSIS/ARM/Include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/devices\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/mcu/apollo3\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/mcu/apollo3/regs\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/FreeRTOSv10.1.1/Source\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/FreeRTOSv10.1.1/Source/include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/FreeRTOSv10.1.1/Source/portable/GCC/AMapollo2\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/FreeRTOSv10.1.1/Source/portable/MemMang\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/gatt\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/hid\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/uribeacon\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/bas\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/hrps\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/rscp\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/profiles/gap\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/apps\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/apps/app\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/sources/services\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-profiles/include/app\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/hci/ambiq/apollo3\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/hci/ambiq\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/sec/common\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/dm\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/l2c\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/hci\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/att\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/cfg\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/sources/stack/smp\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/ble-host/include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/wsf/sources\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/wsf/sources/util\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/wsf/sources/port/freertos\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/cordio/wsf/include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/uecc\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/AmbiqSuiteSDK/third_party/mbedtls-2.4.2/include\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/RTT/RTT\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/RTT/Config\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/SystemView/Config\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/SystemView/Sample/FreeRTOSv10\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/SystemView/Sample/FreeRTOSv10/Config/Cortex-M\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/SystemView/SEGGER\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/SystemView/SYSVIEW\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/libraries/common\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/libraries/debug\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/libraries/ambiq_log\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/FatFs/source\" \"-I/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/cores/apollo3/external/spiffs/src\" -DSUPPORT_AT {includes} \"{source_file}\" -o \"{object_file}\"",
+    "recipe.hooks.sketch.prebuild.1.pattern.windows=\"/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/tools/buildtime/v0.0.0/buildtime.exe\" \"/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/variants/WisCore_RAK11720_Board/version.c\"",
+    "recipe.hooks.sketch.prebuild.1.pattern=python3 \"/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/tools/buildtime/v0.0.0/buildtime.py\" \"/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/variants/WisCore_RAK11720_Board/version.c\"",
+    "recipe.objcopy.bin.pattern=\"/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/tools/arm-none-eabi-gcc/9-2019q4/bin/arm-none-eabi-objcopy\" -O binary -S  \"{build.path}/{build.project_name}.elf\" \"{build.path}/{build.project_name}.bin\"",
+    "recipe.objcopy.hex.pattern=\"/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/tools/arm-none-eabi-gcc/9-2019q4/bin/arm-none-eabi-objcopy\" -O ihex  \"{build.path}/{build.project_name}.elf\" \"{build.path}/{build.project_name}.hex\"",
+    "recipe.objcopy.zip.1.pattern.windows=\"/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/security/apollo3_scripts/windows/ota_binary_converter.exe\" --load-address 0x14000 --appbin \"{build.path}/{build.project_name}.bin\" -o \"{build.path}/{build.project_name}_Nonsecure_OTA_Package_UART\"",
+    "recipe.objcopy.zip.1.pattern=\"/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/security/apollo3_scripts/macosx/ota_binary_converter\" --load-address 0x14000 --appbin \"{build.path}/{build.project_name}.bin\" -o \"{build.path}/{build.project_name}_Nonsecure_OTA_Package_UART\"",
+    "recipe.objcopy.zip.2.pattern.windows=\"/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/security/apollo3_scripts/windows/create_cust_image_blob.exe\" --bin \"{build.path}/{build.project_name}.bin\" --load-address 0x14000 --magic-num 0xC1 -o \"{build.path}/{build.project_name}_Main_Nonsecure_OTA_BLOB\" --version 0x0",
+    "recipe.objcopy.zip.2.pattern=\"/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/security/apollo3_scripts/macosx/create_cust_image_blob\" --bin \"{build.path}/{build.project_name}.bin\" --load-address 0x14000 --magic-num 0xC1 -o \"{build.path}/{build.project_name}_Main_Nonsecure_OTA_BLOB\" --version 0x0",
+    "recipe.objcopy.zip.3.pattern.windows=\"/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/security/apollo3_scripts/windows/ota_binary_converter.exe\" --load-address 0x84000 --appbin \"{build.path}/{build.project_name}_Main_Nonsecure_OTA_BLOB.bin\" -o \"{build.path}/{build.project_name}_Nonsecure_OTA_Package_BLE\"",
+    "recipe.objcopy.zip.3.pattern=\"/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/security/apollo3_scripts/macosx/ota_binary_converter\" --load-address 0x84000 --appbin \"{build.path}/{build.project_name}_Main_Nonsecure_OTA_BLOB.bin\" -o \"{build.path}/{build.project_name}_Nonsecure_OTA_Package_BLE\"",
+    "recipe.output.save_file={build.project_name}.WisCore_RAK11720_Board.hex",
+    "recipe.output.save_file_bin={build.project_name}.save.bin",
+    "recipe.output.save_file_hexu={build.project_name}.save.hex",
+    "recipe.output.tmp_file={build.project_name}.hex",
+    "recipe.output.tmp_file_bin={build.project_name}.bin",
+    "recipe.output.tmp_file_hex={build.project_name}.hex",
+    "recipe.size.pattern=\"/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/tools/arm-none-eabi-gcc/9-2019q4/bin/arm-none-eabi-size\" -A \"{build.path}/{build.project_name}.elf\"",
+    "recipe.size.regex.data=^(?:\\.data|\\.bss)\\s+([0-9]+).*",
+    "recipe.size.regex=^(?:\\.text|\\.data|)\\s+([0-9]+).*",
+    "runtime.hardware.path=/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3",
+    "runtime.ide.path=/opt/homebrew/bin",
+    "runtime.ide.version=10607",
+    "runtime.os=macosx",
+    "runtime.platform.path=/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2",
+    "runtime.tools.arduinoOTA-1.3.0.path=/Users/juanrodriguez/Library/Arduino15/packages/arduino/tools/arduinoOTA/1.3.0",
+    "runtime.tools.arduinoOTA.path=/Users/juanrodriguez/Library/Arduino15/packages/arduino/tools/arduinoOTA/1.3.0",
+    "runtime.tools.arm-none-eabi-gcc-7-2017q4.path=/Users/juanrodriguez/Library/Arduino15/packages/arduino/tools/arm-none-eabi-gcc/7-2017q4",
+    "runtime.tools.arm-none-eabi-gcc-9-2019q4.path=/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/tools/arm-none-eabi-gcc/9-2019q4",
+    "runtime.tools.arm-none-eabi-gcc.path=/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/tools/arm-none-eabi-gcc/9-2019q4",
+    "runtime.tools.avr-gcc-7.3.0-atmel3.6.1-arduino7.path=/Users/juanrodriguez/Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino7",
+    "runtime.tools.avr-gcc.path=/Users/juanrodriguez/Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino7",
+    "runtime.tools.avrdude-6.3.0-arduino17.path=/Users/juanrodriguez/Library/Arduino15/packages/arduino/tools/avrdude/6.3.0-arduino17",
+    "runtime.tools.avrdude.path=/Users/juanrodriguez/Library/Arduino15/packages/arduino/tools/avrdude/6.3.0-arduino17",
+    "runtime.tools.bossac-1.9.1-arduino5.path=/Users/juanrodriguez/Library/Arduino15/packages/arduino/tools/bossac/1.9.1-arduino5",
+    "runtime.tools.bossac.path=/Users/juanrodriguez/Library/Arduino15/packages/arduino/tools/bossac/1.9.1-arduino5",
+    "runtime.tools.buildtime-v0.0.0.path=/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/tools/buildtime/v0.0.0",
+    "runtime.tools.buildtime.path=/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/tools/buildtime/v0.0.0",
+    "runtime.tools.ctags-5.8-arduino11.path=/Users/juanrodriguez/Library/Arduino15/packages/builtin/tools/ctags/5.8-arduino11",
+    "runtime.tools.ctags.path=/Users/juanrodriguez/Library/Arduino15/packages/builtin/tools/ctags/5.8-arduino11",
+    "runtime.tools.dfu-discovery-0.1.2.path=/Users/juanrodriguez/Library/Arduino15/packages/builtin/tools/dfu-discovery/0.1.2",
+    "runtime.tools.dfu-discovery.path=/Users/juanrodriguez/Library/Arduino15/packages/builtin/tools/dfu-discovery/0.1.2",
+    "runtime.tools.dfu-util-0.11.0-arduino5.path=/Users/juanrodriguez/Library/Arduino15/packages/arduino/tools/dfu-util/0.11.0-arduino5",
+    "runtime.tools.dfu-util.path=/Users/juanrodriguez/Library/Arduino15/packages/arduino/tools/dfu-util/0.11.0-arduino5",
+    "runtime.tools.esp-rv32-2411.path=/Users/juanrodriguez/Library/Arduino15/packages/esp32/tools/esp-rv32/2411",
+    "runtime.tools.esp-rv32.path=/Users/juanrodriguez/Library/Arduino15/packages/esp32/tools/esp-rv32/2411",
+    "runtime.tools.esp-x32-2411.path=/Users/juanrodriguez/Library/Arduino15/packages/esp32/tools/esp-x32/2411",
+    "runtime.tools.esp-x32.path=/Users/juanrodriguez/Library/Arduino15/packages/esp32/tools/esp-x32/2411",
+    "runtime.tools.esp32-arduino-libs-idf-release_v5.5-b66b5448-v1.path=/Users/juanrodriguez/Library/Arduino15/packages/esp32/tools/esp32-arduino-libs/idf-release_v5.5-b66b5448-v1",
+    "runtime.tools.esp32-arduino-libs.path=/Users/juanrodriguez/Library/Arduino15/packages/esp32/tools/esp32-arduino-libs/idf-release_v5.5-b66b5448-v1",
+    "runtime.tools.esptool_py-4.5.1.path=/Users/juanrodriguez/Library/Arduino15/packages/esp32/tools/esptool_py/4.5.1",
+    "runtime.tools.esptool_py-5.0.0.path=/Users/juanrodriguez/Library/Arduino15/packages/esp32/tools/esptool_py/5.0.0",
+    "runtime.tools.esptool_py.path=/Users/juanrodriguez/Library/Arduino15/packages/esp32/tools/esptool_py/5.0.0",
+    "runtime.tools.mdns-discovery-1.0.9.path=/Users/juanrodriguez/Library/Arduino15/packages/builtin/tools/mdns-discovery/1.0.9",
+    "runtime.tools.mdns-discovery.path=/Users/juanrodriguez/Library/Arduino15/packages/builtin/tools/mdns-discovery/1.0.9",
+    "runtime.tools.mklittlefs-3.0.0-gnu12-dc7f933.path=/Users/juanrodriguez/Library/Arduino15/packages/esp32/tools/mklittlefs/3.0.0-gnu12-dc7f933",
+    "runtime.tools.mklittlefs.path=/Users/juanrodriguez/Library/Arduino15/packages/esp32/tools/mklittlefs/3.0.0-gnu12-dc7f933",
+    "runtime.tools.mkspiffs-0.2.3.path=/Users/juanrodriguez/Library/Arduino15/packages/esp32/tools/mkspiffs/0.2.3",
+    "runtime.tools.mkspiffs.path=/Users/juanrodriguez/Library/Arduino15/packages/esp32/tools/mkspiffs/0.2.3",
+    "runtime.tools.nrfjprog-10.15.4.path=/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/tools/nrfjprog/10.15.4",
+    "runtime.tools.nrfjprog.path=/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/tools/nrfjprog/10.15.4",
+    "runtime.tools.openocd-0.11.0-arduino2.path=/Users/juanrodriguez/Library/Arduino15/packages/arduino/tools/openocd/0.11.0-arduino2",
+    "runtime.tools.openocd-esp32-v0.12.0-esp32-20230921.path=/Users/juanrodriguez/Library/Arduino15/packages/esp32/tools/openocd-esp32/v0.12.0-esp32-20230921",
+    "runtime.tools.openocd-esp32-v0.12.0-esp32-20250422.path=/Users/juanrodriguez/Library/Arduino15/packages/esp32/tools/openocd-esp32/v0.12.0-esp32-20250422",
+    "runtime.tools.openocd-esp32.path=/Users/juanrodriguez/Library/Arduino15/packages/esp32/tools/openocd-esp32/v0.12.0-esp32-20250422",
+    "runtime.tools.openocd.path=/Users/juanrodriguez/Library/Arduino15/packages/arduino/tools/openocd/0.11.0-arduino2",
+    "runtime.tools.pc-nrfutil-v6.1.7.path=/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/tools/pc-nrfutil/v6.1.7",
+    "runtime.tools.pc-nrfutil.path=/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/tools/pc-nrfutil/v6.1.7",
+    "runtime.tools.riscv32-esp-elf-gdb-16.2_20250324.path=/Users/juanrodriguez/Library/Arduino15/packages/esp32/tools/riscv32-esp-elf-gdb/16.2_20250324",
+    "runtime.tools.riscv32-esp-elf-gdb.path=/Users/juanrodriguez/Library/Arduino15/packages/esp32/tools/riscv32-esp-elf-gdb/16.2_20250324",
+    "runtime.tools.s3-gcc-2021r2-p5.path=/Users/juanrodriguez/Library/Arduino15/packages/esp32/tools/s3-gcc/2021r2-p5",
+    "runtime.tools.s3-gcc.path=/Users/juanrodriguez/Library/Arduino15/packages/esp32/tools/s3-gcc/2021r2-p5",
+    "runtime.tools.serial-discovery-1.4.1.path=/Users/juanrodriguez/Library/Arduino15/packages/builtin/tools/serial-discovery/1.4.1",
+    "runtime.tools.serial-discovery.path=/Users/juanrodriguez/Library/Arduino15/packages/builtin/tools/serial-discovery/1.4.1",
+    "runtime.tools.serial-monitor-0.15.0.path=/Users/juanrodriguez/Library/Arduino15/packages/builtin/tools/serial-monitor/0.15.0",
+    "runtime.tools.serial-monitor.path=/Users/juanrodriguez/Library/Arduino15/packages/builtin/tools/serial-monitor/0.15.0",
+    "runtime.tools.uploader-0.0.1.path=/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/tools/uploader/0.0.1",
+    "runtime.tools.uploader.path=/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/tools/uploader/0.0.1",
+    "runtime.tools.uploader_ymodem-1.0.1.path=/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/tools/uploader_ymodem/1.0.1",
+    "runtime.tools.uploader_ymodem.path=/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/tools/uploader_ymodem/1.0.1",
+    "runtime.tools.xtensa-esp-elf-gdb-11.2_20220823.path=/Users/juanrodriguez/Library/Arduino15/packages/esp32/tools/xtensa-esp-elf-gdb/11.2_20220823",
+    "runtime.tools.xtensa-esp-elf-gdb-16.2_20250324.path=/Users/juanrodriguez/Library/Arduino15/packages/esp32/tools/xtensa-esp-elf-gdb/16.2_20250324",
+    "runtime.tools.xtensa-esp-elf-gdb.path=/Users/juanrodriguez/Library/Arduino15/packages/esp32/tools/xtensa-esp-elf-gdb/16.2_20250324",
+    "software=ARDUINO",
+    "tools.avrdude.path=/Users/juanrodriguez/Library/Arduino15/packages/arduino/tools/avrdude/6.3.0-arduino17",
+    "tools.bootburn.bootloader.file=/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/prebuilt/bootloader_apollo3_ota.bin",
+    "tools.bootburn.bootloader.params.quiet=",
+    "tools.bootburn.bootloader.params.verbose=",
+    "tools.bootburn.bootloader.pattern={program.burn_pattern} \"{serial.port}\" -f \"{bootloader.file}\" -i 6 -o 0xF8000",
+    "tools.bootburn.erase.params.quiet=",
+    "tools.bootburn.erase.params.verbose=",
+    "tools.bootburn.erase.pattern=",
+    "tools.uploader_ymodem.cmd.windows=\"/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/security/apollo3_scripts/windows/apollo3_uart_update_script.exe\"",
+    "tools.uploader_ymodem.cmd=\"/Users/juanrodriguez/Library/Arduino15/packages/rak_rui/hardware/apollo3/4.2.2/security/apollo3_scripts/macosx/apollo3_uart_update_script\"",
+    "tools.uploader_ymodem.upload.params.quiet=",
+    "tools.uploader_ymodem.upload.params.verbose=--verbose",
+    "tools.uploader_ymodem.upload.pattern={cmd} -f \"{build.path}/{build.project_name}_Nonsecure_OTA_Package_UART.bin\" -p {serial.port}",
+    "upload.maximum_data_size=392192",
+    "upload.maximum_size=917504",
+    "upload.protocol=uploader_ymodem",
+    "upload.tool.default=uploader_ymodem",
+    "upload.tool=uploader_ymodem",
+    "upload.use_1200bps_touch=true",
+    "upload.wait_for_upload_port=true",
+    "version=4.2.2"
+  ]
+}

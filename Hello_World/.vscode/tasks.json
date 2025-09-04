@@ -1,0 +1,60 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Verify Sketch",
+            "type": "shell",
+            "command": "arduino-cli",
+            "args": [
+                "compile",
+                "--fqbn",
+                "rak_rui:apollo3:WisCoreRAK11720Board",
+                "--export-binaries",
+                "--output-dir",
+                "build",
+                "--log-level",
+                "info",
+                "${fileDirname}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Upload via SWD",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-c",
+                "JLinkExe -device AMA3B1KK-KBR -if SWD -speed 4000 -autoconnect 1 -CommandFile /dev/stdin <<'EOF'\nconnect\nhalt\nerase\nloadfile build/Hello_World.ino.elf\nverify\nreset\ngo\nexit\nEOF"
+            ],
+            "group": "test",
+            "dependsOn": "Verify Sketch",
+            "problemMatcher": []
+        },
+        {
+            "label": "Build for Debug",
+            "type": "shell",
+            "command": "arduino-cli",
+            "args": [
+                "compile",
+                "--fqbn",
+                "rak_rui:apollo3:WisCoreRAK11720Board",
+                "--build-property",
+                "compiler.cpp.extra_flags=-g -O0",
+                "--build-property",
+                "compiler.c.extra_flags=-g -O0",
+                "--export-binaries",
+                "--output-dir",
+                "build",
+                "--log-level",
+                "warn",
+                "${fileDirname}"
+            ],
+            "group": "build",
+            "problemMatcher": []
+        }
+    ]
+}
