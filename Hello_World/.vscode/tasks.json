@@ -1,60 +1,41 @@
 {
-    "version": "2.0.0",
-    "tasks": [
+    "version": "0.2.0",
+    "configurations": [
+        
         {
-            "label": "Verify Sketch",
-            "type": "shell",
-            "command": "arduino-cli",
-            "args": [
-                "compile",
-                "--fqbn",
-                "rak_rui:apollo3:WisCoreRAK11720Board",
-                "--export-binaries",
-                "--output-dir",
-                "build",
-                "--log-level",
-                "info",
-                "${fileDirname}"
+            "name": "Debug RAK11720 (J-Link)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "jlink",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/Hello_World.ino.elf",
+            "device": "AMA3B1KK-KBR",
+            "interface": "swd",
+            "preLaunchTask": "Build for Debug",
+            "svdFile": "",
+            "showDevDebugOutput": "raw",
+            "postLaunchCommands": [
+                "monitor reset halt",
+                "load",
+                "monitor reset halt"
             ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "problemMatcher": []
+            "swoConfig": {
+                "enabled": false,
+                "cpuFrequency": 48000000,
+                "swoFrequency": 2000000,
+                "source": "probe"
+            }
         },
         {
-            "label": "Upload via SWD",
-            "type": "shell",
-            "command": "bash",
-            "args": [
-                "-c",
-                "JLinkExe -device AMA3B1KK-KBR -if SWD -speed 4000 -autoconnect 1 -CommandFile /dev/stdin <<'EOF'\nconnect\nhalt\nerase\nloadfile build/Hello_World.ino.elf\nverify\nreset\ngo\nexit\nEOF"
-            ],
-            "group": "test",
-            "dependsOn": "Verify Sketch",
-            "problemMatcher": []
-        },
-        {
-            "label": "Build for Debug",
-            "type": "shell",
-            "command": "arduino-cli",
-            "args": [
-                "compile",
-                "--fqbn",
-                "rak_rui:apollo3:WisCoreRAK11720Board",
-                "--build-property",
-                "compiler.cpp.extra_flags=-g -O0",
-                "--build-property",
-                "compiler.c.extra_flags=-g -O0",
-                "--export-binaries",
-                "--output-dir",
-                "build",
-                "--log-level",
-                "warn",
-                "${fileDirname}"
-            ],
-            "group": "build",
-            "problemMatcher": []
+            "name": "Attach to RAK11720 (J-Link)",
+            "type": "cortex-debug",
+            "request": "attach",
+            "servertype": "jlink",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/Hello_World.ino.elf",
+            "device": "AMA3B1KK-KBR",
+            "interface": "swd",
+            "showDevDebugOutput": "raw"
         }
     ]
 }
