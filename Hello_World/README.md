@@ -23,4 +23,5 @@ Arduino project for RAK11720 with hardware debugging support via J-Link SWD.
 - **Verify Sketch**: Ctrl+Shift+P → "Tasks: Run Task" → "Verify Sketch"
 - **Upload Sketch**: Ctrl+Shift+P → "Tasks: Run Task" → "Upload Sketch" (upload the code using uart, port needs to be updated in the tasks.json file)
 - **Upload via SWD**: Ctrl+Shift+P → "Tasks: Run Task" → "Upload via SWD" (uses J-Link, requires debug build)
+- **Start debugging**: Press F5.
 
