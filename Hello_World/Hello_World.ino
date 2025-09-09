@@ -58,9 +58,9 @@ void detectFlashChip()
 
     // Match expected values (common Winbond/BoyaMicro 128Mbit)
     if (manufacturer == 0x68 && memType == 0x40 && capacity == 0x18) {
-        Serial.println("✅ Flash chip detected!");
+        Serial.println("Flash chip detected!");
     } else {
-        Serial.println("❌ Flash chip not detected or ID mismatch.");
+        Serial.println("Flash chip not detected or ID mismatch.");
     }
 }
 
@@ -69,12 +69,10 @@ void loop()
     byte error, address;
     int nDevices;
     digitalWrite(ledPin2, LOW); // active NFC regulator
-    val2 = analo gRead(analogPin);
+    val2 = analogRead(analogPin);
     Serial.println(val2);
-    Serial.println("Scanning...");
-    //Serial.println("TEsting I2C devices on the bus...");
-
-    nDevices = 0;
+    Serial.println("Scanning..."); 
+        nDevices = 0;
     for (address = 1; address < 127; address++) {
         Wire.beginTransmission(address);
         error = Wire.endTransmission();
