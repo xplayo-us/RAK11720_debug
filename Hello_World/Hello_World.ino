@@ -1,5 +1,6 @@
 #include <Wire.h>
 #include <SPI.h>
+#include "KeypadManager.h"
 
 #define PB5                 38 // LED GREEN
 #define PA9                 9  // IO6 or I2C2_SCL
@@ -16,6 +17,9 @@ bool state = false;
 bool ledSwitch = false;
 
 SPISettings spiFlash(1000000, MSBFIRST, SPI_MODE0);
+
+// Initialize keypad manager
+KeypadManager keypad;
 
 void setup()
 {
@@ -36,6 +40,11 @@ void setup()
 
     // Run JEDEC ID check
     detectFlashChip();
+
+    // Initialize keypad
+    if (!keypad.begin()) {
+        Serial.println("WARNING: Keypad initialization failed!");
+    }
 }
 
 void detectFlashChip()
@@ -72,6 +81,7 @@ void loop()
     val2 = analogRead(analogPin);
     Serial.println(val2);
     Serial.println("Scanning..."); 
+    Serial.println("Testing Second debugger");
         nDevices = 0;
     for (address = 1; address < 127; address++) {
         Wire.beginTransmission(address);
@@ -105,6 +115,16 @@ void loop()
     }
     //CHeck SPI FLASH communication
     detectFlashChip();
+
+    // Check for keypad input
+    if (keypad.hasKeyPressed()) {
+        char key = keypad.getLastKey();
+        if (key != 0) {
+            Serial.print("Key pressed: ");
+            Serial.println(key);
+        }
+        keypad.printKeyEvent(); // Detailed event information
+    }
 
     delay(5000);
 }
