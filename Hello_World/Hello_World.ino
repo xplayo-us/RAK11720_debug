@@ -80,8 +80,7 @@ void loop()
     digitalWrite(ledPin2, LOW); // active NFC regulator
     val2 = analogRead(analogPin);
     Serial.println(val2);
-    Serial.println("Scanning..."); 
-    Serial.println("Testing Second debugger");
+    Serial.println("Scanning I2C DEVICES..."); 
         nDevices = 0;
     for (address = 1; address < 127; address++) {
         Wire.beginTransmission(address);
@@ -122,6 +121,11 @@ void loop()
         if (key != 0) {
             Serial.print("Key pressed: ");
             Serial.println(key);
+
+            // Toggle LED2 when any key is pressed
+            keypad.toggleLED2();
+            Serial.print("LED2 is now: ");
+            Serial.println(keypad.getLED2State() ? "ON" : "OFF");
         }
         keypad.printKeyEvent(); // Detailed event information
     }

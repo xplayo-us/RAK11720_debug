@@ -8,7 +8,7 @@ const char KeypadManager::keyMap[4][4] = {
     {'*', '0', '#', 'D'}
 };
 
-KeypadManager::KeypadManager() : lastKey(0) {
+KeypadManager::KeypadManager() : lastKey(0), led2State(false) {
 }
 
 bool KeypadManager::begin() {
@@ -22,6 +22,10 @@ bool KeypadManager::begin() {
     // Configure for 4x4 matrix (4 rows, 4 columns)
     keypad.matrix(4, 4);
 
+    // Configure ROW7 (TCA8418_ROW7) as GPIO output for LED2
+    keypad.pinMode(TCA8418_ROW7, OUTPUT);
+    setLED2(false); // Start with LED off
+
     return true;
 }
 
@@ -31,9 +35,14 @@ bool KeypadManager::hasKeyPressed() {
 
 char KeypadManager::getLastKey() {
     if (hasKeyPressed()) {
-        keypadEvent e = keypad.read();
-        if (e.bit.EVENT == KEY_JUST_PRESSED) {
-            lastKey = mapKeyToChar(e.bit.ROW, e.bit.COL);
+        uint8_t event = keypad.getEvent();
+        // Check if it's a key press (bit 7 = 1 means press, bit 7 = 0 means release)
+        if (event & 0x80) {
+            // TCA8418 encoding from datasheet: subtract 1, then row=k/10, col=k%10
+            uint8_t k = (event & 0x7F) - 1;
+            uint8_t row = k / 10;
+            uint8_t col = k % 10;
+            lastKey = mapKeyToChar(row, col);
             return lastKey;
         }
     }
@@ -49,24 +58,43 @@ char KeypadManager::mapKeyToChar(uint8_t row, uint8_t col) {
 
 void KeypadManager::printKeyEvent() {
     if (hasKeyPressed()) {
-        keypadEvent e = keypad.read();
+        uint8_t event = keypad.getEvent();
 
-        Serial.print("Key at Row ");
-        Serial.print(e.bit.ROW);
+        // Extract row and column from event using correct TCA8418 encoding
+        uint8_t k = (event & 0x7F) - 1;
+        uint8_t row = k / 10;
+        uint8_t col = k % 10;
+        bool isPress = (event & 0x80) != 0;
+
+        Serial.print("Raw event: 0x");
+        Serial.print(event, HEX);
+        Serial.print(" -> Row ");
+        Serial.print(row);
         Serial.print(", Col ");
-        Serial.print(e.bit.COL);
+        Serial.print(col);
         Serial.print(" was ");
+        Serial.print(isPress ? "pressed" : "released");
 
-        if (e.bit.EVENT == KEY_JUST_PRESSED) {
-            Serial.print("pressed");
-            char key = mapKeyToChar(e.bit.ROW, e.bit.COL);
+        if (isPress) {
             Serial.print(" (");
-            Serial.print(key);
+            Serial.print(mapKeyToChar(row, col));
             Serial.print(")");
-        } else if (e.bit.EVENT == KEY_JUST_RELEASED) {
-            Serial.print("released");
         }
 
         Serial.println();
     }
+}
+
+// LED2 Control Functions
+void KeypadManager::setLED2(bool state) {
+    led2State = state;
+    keypad.digitalWrite(TCA8418_ROW7, state ? HIGH : LOW);
+}
+
+void KeypadManager::toggleLED2() {
+    setLED2(!led2State);
+}
+
+bool KeypadManager::getLED2State() {
+    return led2State;
 }
