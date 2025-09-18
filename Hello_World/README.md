@@ -11,12 +11,18 @@ Arduino project for RAK11720 with hardware debugging support via J-Link SWD.
    ```
 2. **Cortex-Debug extension**
 - Open VS Code, press Cmd+Shift+X to open Extensions, and search for "Cortex-Debug" by marus25
-2. **Cortex-Debug extension**
+2. **C/C++ extension**
 - Open VS Code, press Cmd+Shift+X to open Extensions, and search for "C/C++" by microsoft
 3. **J-Link Software** - For SWD debugging (JLinkExe)
    ```bash
    # macOS (Homebrew)
    brew install segger-jlink
+   ```
+
+4. **GDB Debugger** - For debugging support
+   ```bash
+   # macOS (Homebrew)
+   brew install gdb
    ```
 
 ### VS Code Tasks

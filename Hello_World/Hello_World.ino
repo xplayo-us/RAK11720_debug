@@ -115,19 +115,16 @@ void loop()
     //CHeck SPI FLASH communication
     detectFlashChip();
 
-    // Check for keypad input
+    // Check for keypad input and process all events in buffer
     if (keypad.hasKeyPressed()) {
-        char key = keypad.getLastKey();
-        if (key != 0) {
-            Serial.print("Key pressed: ");
-            Serial.println(key);
+        bool keyPressed = keypad.processAllEvents();
 
-            // Toggle LED2 when any key is pressed
+        // Only toggle LED once per cycle if any key was pressed (not released)
+        if (keyPressed) {
             keypad.toggleLED2();
             Serial.print("LED2 is now: ");
             Serial.println(keypad.getLED2State() ? "ON" : "OFF");
         }
-        keypad.printKeyEvent(); // Detailed event information
     }
 
     delay(5000);

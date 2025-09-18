@@ -57,6 +57,10 @@ public:
     void toggleLED2();
     bool getLED2State();
 
+    // Buffer processing
+    bool processAllEvents();
+    char mapKeyToChar(uint8_t row, uint8_t col);
+
 private:
     Adafruit_TCA8418 keypad;
     char lastKey;
@@ -64,7 +68,6 @@ private:
 
     // 4x4 keypad mapping based on your schematic
     static const char keyMap[4][4];
-    char mapKeyToChar(uint8_t row, uint8_t col);
 };
 
 #endif
