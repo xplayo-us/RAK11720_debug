@@ -1,6 +1,6 @@
 #include <Wire.h>
 #include <SPI.h>
-#include "KeypadManager.h"
+#include "src/KeypadManager.h"
 
 #define PB5                 38 // LED GREEN
 #define PA9                 9  // IO6 or I2C2_SCL
